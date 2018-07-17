@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class Controller {
     private RSA rsa = new RSA();
-    private final String prefix = "/home/lcr/file/";
+    private final String prefix = "/home/zhaopeng/FileServer/";
     public void upload(DataInputStream dis, DataOutputStream dos){
         try{
             long fileLength = dis.readLong();

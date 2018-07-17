@@ -1,14 +1,16 @@
-/*
+
+package com.zp;
+/**
  * Test
  *
  * @author zhaopeng
  * @date 18-7-15
+ * 用于测试调试，本片代码与功能无关
  */
-package com.zp;
-
 import java.io.*;
 import java.security.*;
 import java.util.Arrays;
+import java.util.EventObject;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -71,4 +73,35 @@ class testTread extends Thread{
             }
         }
     }
+}
+
+class AgeChangeEvent extends EventObject {
+    private int oage, nage;
+
+
+    public int getOage() {
+        return oage;
+    }
+
+    public int getNage() {
+        return nage;
+    }
+
+    /**
+     * Constructs a prototypical Event.
+     *
+     * @param source The object on which the Event initially occurred.
+     * @throws IllegalArgumentException if source is null.
+     */
+    public AgeChangeEvent(Object source, int oage, int nage) {
+
+        super(source);
+        this.nage = nage;
+        this.oage = oage;
+
+
+    }
+
+
+
 }
